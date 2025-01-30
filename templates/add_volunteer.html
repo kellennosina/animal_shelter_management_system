@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Volunteer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="/animals">Animals</a>
+            <a href="/volunteers">Volunteers</a>
+            <a href="/doctors">Doctors</a>
+            <a href="/health_records">Health Records</a>
+        </div>
+        <div class="nav-right">
+            <a href="/add_volunteer">Add Volunteer</a>
+        </div>
+    </nav>
+
+    <h3 style="text-align: center;">Add New Volunteer</h3>
+    <div class="container">
+        <form action="{{ url_for('add_volunteer') }}" method="POST">
+            <label>Volunteer ID: <input type="number" name="volunteer_id" required></label><br>
+            <label>Task: <input type="text" name="task" required></label><br>
+            <label>Contact: <input type="text" name="contact" required></label><br>
+            <label>Name: <input type="text" name="name" required></label><br>
+            <button type="submit">Add Volunteer</button>
+        </form>
+    </div>
+</body>
+
+</html>

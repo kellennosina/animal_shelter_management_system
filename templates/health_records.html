@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Health Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="/">Home</a>
+            <a href="/animals">Animals</a>
+            <a href="/volunteers">Volunteers</a>
+            <a href="/doctors">Doctors</a>
+        </div>
+        <div class="nav-right">
+            <a href="/add_animal_page">Add Animal</a>
+        </div>
+    </nav>
+    <h2 style="text-align: center;">Health Records</h2>
+    <form action="{{ url_for('health_records') }}" method="POST">
+        <label for="search_id">Search by Animal ID:</label>
+        <input class="input-searchbar" type="text" id="search_id" name="search_id" required>
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <tr>
+            <th>Animal ID</th>
+            <th>Date</th>
+            <th>Treatment</th>
+            <th>Vet Info</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.animal_id }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.treatment }}</td>
+            <td>{{ record.vet_info }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

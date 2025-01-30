@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Shelter Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="/animals">Animals</a>
+            <a href="/volunteers">Volunteers</a>
+            <a href="/doctors">Doctors</a>
+            <a href="/health_records">Health Records</a>
+        </div>
+        <div class="nav-right">
+            <a href="/add_animal_page">Add Animal</a>
+        </div>
+    </nav>
+    <div class="container">
+        <button class="btn" onclick="window.location.href= '/animals'">Animals</button>
+        <button class="btn" onclick="window.location.href= '/volunteers'">Volunteers</button>
+        <button class="btn" onclick="window.location.href= '/doctors'">Doctors</button>
+        <button class="btn" onclick="window.location.href= '/health_records'">Health Records</button>
+    </div>
+
+</body>
+</html>

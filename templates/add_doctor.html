@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Doctor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="/animals">Animals</a>
+            <a href="/volunteers">Volunteers</a>
+            <a href="/doctors">Doctors</a>
+            <a href="/health_records">Health Records</a>
+        </div>
+        <div class="nav-right">
+            <a href="/add_doctor">Add Doctor</a>
+        </div>
+    </nav>
+
+    <h3 style="text-align: center;">Add New Doctor</h3>
+    <div class="container">
+        <form action="{{ url_for('add_doctor') }}" method="POST">
+            <label>Doctor ID: <input type="number" name="doctor_id" required></label><br>
+            <label>Availability: <input type="text" name="availability" required></label><br>
+            <label>Contact: <input type="text" name="contact" required></label><br>
+            <label>Name: <input type="text" name="name" required></label><br>
+            <label>Specialisation: <input type="text" name="specialisation" required></label><br>
+            <button type="submit">Add Doctor</button>
+        </form>
+    </div>
+</body>
+
+</html> 

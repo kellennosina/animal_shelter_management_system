@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Space between left and right blocks */
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    /* Display links in a row */
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: rgb(255, 107, 107);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.container a:hover {
+    color: rgb(1, 1, 1);
+}
+
+.container_center {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input-searchbar{
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input-small {
+    width: 100px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+/* Medium input box */
+.input-medium {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Large input box */
+.input-large {
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Custom border and background style */
+.input-custom {
+    border: 2px solid #4CAF50;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Rounded input box */
+.input-rounded {
+    width: 250px;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Full-width input box */
+.input-full {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f2f2f2;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    /* Border around the table */
+}
+
+th,
+td {
+    border: 1px solid #666;
+    /* Border around table cells */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.button.modify {
+    background-color: #4CAF50;
+    /* Green for Edit */
+}
+
+.button.delete {
+    background-color: #f44336;
+    /* Red for Delete */
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+button:hover {
+    background-color: #333;
+}
+
